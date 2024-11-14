@@ -1,0 +1,315 @@
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+}
+
+section.home {
+  display: flex; /* Kích hoạt Flexbox */
+  justify-content: center; /* Căn giữa theo chiều ngang */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  padding: 50px 10%;
+  background-color: black;
+  height: 50rem;
+}
+
+.slider-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 52rem;
+  overflow: hidden;
+}
+
+.slider-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  transition: transform 1s ease;
+}
+
+.slide {
+  min-width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+section.home .content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-align: center;
+  padding: 50px;
+  background-color: rgba(0, 0, 0, 0.5); /* nền đen nhẹ cho chữ dễ đọc */
+}
+
+section.home .content {
+  text-align: center;
+  font-size: 3rem;
+  color: #f9f9f9;
+}
+
+section.content div {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20%;
+}
+
+section.content p {
+  font-size: 1.5rem;
+  padding: 10px;
+  line-height: 20px;
+  text-align: justify;
+}
+
+/* Responsive Design content */
+@media (max-width: 768px) {
+  section.content div {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 15%;
+  }
+}
+
+@media (max-width: 500px) {
+  section.content div {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 10%;
+  }
+}
+
+.projects {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.project-item {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: calc(33.333% - 20px);
+  padding: 10px;
+  text-align: center;
+}
+
+.project-item img {
+  width: 100%;
+  height: 25rem;
+  border-radius: 8px;
+}
+
+.project-item h3 {
+  color: green;
+  margin: 10px 0;
+  font-size: 1.2rem;
+}
+
+.project-item p {
+  font-size: 1.2rem;
+  color: #333;
+  font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .project-item {
+    width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 500px) {
+  .project-item {
+    width: 100%;
+  }
+}
+
+/* Phần chính */
+.so_lieu {
+  text-align: center;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.title {
+  color: #ff9800;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.counter-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 50px;
+}
+
+.counter {
+  color: #2e7d32;
+  text-align: center;
+  flex: 1;
+}
+
+.counter h3 {
+  font-size: 50px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.counter p {
+  margin: 5px 0 0;
+  font-size: 16px;
+  color: #555;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .counter-container {
+    flex-direction: column; /* Sắp xếp thành cột trên màn hình nhỏ */
+    gap: 20px;
+  }
+  .counter h3 {
+    font-size: 40px;
+  }
+  .counter p {
+    font-size: 15px;
+  }
+  .title {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .counter-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .counter h3 {
+    font-size: 35px;
+  }
+  .counter p {
+    font-size: 14px;
+  }
+  .title {
+    font-size: 20px;
+  }
+}
+
+section.edu {
+  padding: 50px 10%;
+  background-color: #f9f9f9;
+  margin-top: 30px;
+}
+
+section.edu .heading_edu {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+  color: #ff7600; /* orange title color */
+}
+
+section.edu .row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+section.edu .anh-container {
+  flex: 1.5; /* Give more space to the image */
+  text-align: center;
+  margin-right: 50px;
+}
+
+section.edu .anh-container img {
+  width: 100%;
+  max-width: 500px; /* Increased image size */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 30px;
+}
+
+section.edu .content {
+  flex: 1.5; /* Reduced content width slightly */
+  padding: 0px; /* Increased padding to balance with image */
+  text-align: center;
+  margin: 10px 20px;
+}
+
+section.edu .content .title {
+  font-size: 1.8rem;
+  color: #28a745; /* green for the subheading */
+  margin-bottom: 20px;
+}
+
+section.edu .content p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin: 15px;
+  color: #555;
+  text-align: justify;
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  section.edu .anh-container img {
+    max-width: 450px; /* Adjusting image size for mid-sized screens */
+  }
+
+  section.edu .content {
+    padding-left: 30px; /* Reduced padding for medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  section.edu .row {
+    flex-direction: column;
+  }
+
+  section.edu .content {
+    padding-left: 0;
+  }
+
+  section.edu.heading {
+    font-size: 2rem;
+  }
+
+  section.edu .content .title {
+    font-size: 1.5rem;
+  }
+
+  section.edu .content p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  section.edu {
+    padding: 30px 5%;
+  }
+
+  section.edu .heading_edu {
+    font-size: 1.8rem;
+  }
+
+  section.edu .content p {
+    font-size: 0.9rem;
+  }
+}

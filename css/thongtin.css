@@ -1,0 +1,327 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* background-color: black; */
+  /* background-color: rgb(19, 18, 18); */
+}
+
+hr {
+  border: none;
+  border-top: 1px solid whitesmoke; /* Màu sắc và độ dày của đường kẻ */
+  width: 100%; /* Độ rộng của đường kẻ */
+  margin: 30px auto;
+}
+
+/* menu  */
+/* Đặt màu nền và căn chỉnh văn bản */
+/* Tổng thể cho phần .home */
+.header-va-menu {
+  background-color: rgb(19, 18, 18);
+}
+
+.home {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 10%;
+  background-color: black;
+  height: 60rem;
+  overflow: hidden;
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.background-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Đảm bảo ảnh phủ đầy và giữ tỷ lệ */
+  filter: brightness(0.6); /* Tối màu nền để chữ nổi bật */
+}
+
+.home .title {
+  position: relative;
+  z-index: 2;
+  color: #f9f9f9;
+  text-align: center;
+  padding: 30px;
+  background-color: rgba(0, 0, 0, 0.5); /* Nền đen nhẹ cho chữ dễ đọc */
+  border-radius: 10px; /* Bo tròn các góc của phần chữ */
+}
+
+.header__title {
+  font-size: 3rem;
+  color: rgb(3, 143, 3); /* Màu chữ xanh lá */
+  margin: 0;
+  line-height: 1.2;
+}
+
+/* Responsive cho màn hình nhỏ */
+@media (max-width: 768px) {
+  .home {
+    padding: 30px 5%;
+    height: 40rem;
+  }
+
+  .header__title {
+    font-size: 2rem; /* Giảm kích thước font chữ trên màn hình nhỏ */
+  }
+
+  .background-image img {
+    object-position: center; /* Đảm bảo hình ảnh hiển thị tốt trên màn hình nhỏ */
+  }
+
+  .home .title {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .home {
+    height: 30rem;
+  }
+
+  .header__title {
+    font-size: 1.5rem;
+  }
+
+  .home .title {
+    padding: 15px;
+  }
+}
+
+/* Phần menu */
+.menu {
+  display: flex;
+  justify-content: space-around;
+  background-color: rgb(19, 18, 18);
+  padding: 30px;
+  width: 80%;
+  margin: auto;
+}
+
+.menu__item {
+  color: rgb(3, 143, 3); /* Màu chữ xanh lá */
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: bold;
+  padding: 30px 20px;
+  border: 1px solid #333; /* Viền xung quanh mỗi mục */
+  flex-grow: 1;
+  text-align: center;
+  transition: color 0.3s, background-color 0.3s;
+}
+.menu__item:hover {
+  color: rgb(21, 255, 0); /* Chữ màu trắng khi hover */
+  text-decoration: none;
+}
+.menu__item:hover::after {
+  transform: translateX(-50%) scaleX(1); /* Mở rộng gạch chân khi hover */
+}
+/* Phần responsive cho màn hình nhỏ */
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu__item {
+    margin-bottom: 10px; /* Khoảng cách giữa các mục khi xếp dọc */
+    width: 100%;
+  }
+}
+
+/* thongtin  */
+.thongtin_va_dedoa {
+  background-color: rgb(19, 18, 18);
+  margin-top: -30px;
+}
+body {
+  font-family: "Arial", sans-serif;
+}
+.thong-tin,
+.de-doa {
+  padding: 10px 10%;
+  background-color: rgb(19, 18, 18);
+  margin-top: 30px;
+}
+
+.heading_thongtin,
+.heading_dedoa {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2.8rem;
+  color: rgb(3, 143, 3);
+}
+
+.thong-tin .row,
+.de-doa .row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.img_thong_tin,
+.img_de_doa {
+  flex: 1.5; /* Give more space to the image */
+  text-align: center;
+  margin-right: 50px;
+}
+
+.img_thong_tin img,
+.img_de_doa img {
+  width: 100%;
+  max-width: 500px; /* Increased image size */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 30px;
+}
+
+.thong-tin .content,
+.de-doa .content {
+  flex: 1.5; /* Reduced content width slightly */
+  padding: 0px; /* Increased padding to balance with image */
+  text-align: justify;
+  /* margin: 10px 20px; */
+  color: white;
+  line-height: 1.8;
+  font-size: 1.6rem;
+  margin: 30px;
+}
+
+/* responsive thong tin  */
+@media (max-width: 1024px) {
+  .img_thong_tin img,
+  .img_de_doa img {
+    max-width: 450px;
+  }
+
+  .thong-tin .content,
+  .de-doa .content {
+    padding-left: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .thong-tin .row,
+  .de-doa .row {
+    flex-direction: column;
+  }
+
+  .thong-tin .content,
+  .de-doa .content {
+    padding-left: 0;
+  }
+
+  .thong-tin .heading_thongtin,
+  .de-doa .heading_dedoa {
+    font-size: 2rem;
+  }
+
+  .thong-tin .content,
+  .de-doa .content {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .thong-tin,
+  .de-doa {
+    padding: 30px 5%;
+  }
+
+  .thong-tin .heading_thongtin,
+  .de-doa .heading_dedoa {
+    font-size: 1.8rem;
+  }
+
+  .thong-tin .content,
+  .de-doa .content {
+    font-size: 0.9rem;
+  }
+}
+
+/* so lieu  */
+.so_lieu {
+  background-color: rgb(19, 18, 18);
+  text-align: center;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.title {
+  color: #2e7d32;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.counter-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 50px;
+  margin: 30px;
+}
+
+.counter {
+  color: #2e7d32;
+  text-align: center;
+  flex: 1;
+}
+
+.counter h3 {
+  font-size: 50px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.counter p {
+  margin: 5px 0 0;
+  font-size: 16px;
+  color: #555;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .counter-container {
+    flex-direction: column; /* Sắp xếp thành cột trên màn hình nhỏ */
+    gap: 20px;
+  }
+  .counter h3 {
+    font-size: 40px;
+  }
+  .counter p {
+    font-size: 15px;
+  }
+  .title {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .counter-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .counter h3 {
+    font-size: 35px;
+  }
+  .counter p {
+    font-size: 14px;
+  }
+  .title {
+    font-size: 20px;
+  }
+}
